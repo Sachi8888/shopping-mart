@@ -10,7 +10,7 @@ USER node
 
 RUN npm install
 
-COPY --chown=node:node package*.json .
+COPY --chown=user:user package-lock.json .
 
 EXPOSE 8080
 
