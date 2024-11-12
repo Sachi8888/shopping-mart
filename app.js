@@ -12,8 +12,7 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
-const MONGODB_URI =
-  "mongodb+srv://admin:admin@cluster0.zm4hf7z.mongodb.net/shop?retryWrites=true&w=majority";
+const MONGODB_URI = process.env.MONGODB_URI;
 console.log(MONGODB_URI);
 
 const errorController = require("./controllers/error");
@@ -94,7 +93,7 @@ app.use(authRoutes);
 app.use(errorController.get404);
 
 mongoose
-  .connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(MONGODB_URI)
   .then((result) => {
     app.listen(3000);
   })
