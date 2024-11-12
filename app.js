@@ -12,7 +12,9 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
-const MONGODB_URI = process.env.MONGODB_URI;
+const MONGODB_URI =
+  "mongodb+srv://admin:admin@cluster0.zm4hf7z.mongodb.net/shop?retryWrites=true&w=majority";
+console.log(MONGODB_URI);
 
 const errorController = require("./controllers/error");
 
