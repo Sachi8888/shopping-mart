@@ -92,7 +92,7 @@ app.use(authRoutes);
 app.use(errorController.get404);
 
 mongoose
-  .connect(process.env.MONGODB_URI)
+  .connect(MONGODB_URI)
   .then((result) => {
     app.listen(3000);
   })
