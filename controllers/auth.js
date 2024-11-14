@@ -1,4 +1,7 @@
 const crypto = require("crypto");
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 const bcrypt = require("bcryptjs");
 const nodemailer = require("nodemailer");
@@ -15,8 +18,8 @@ const transporter = nodemailer.createTransport({
   secure: true,
   auth: {
     // TODO: replace `user` and `pass` values from <https://forwardemail.net>
-    user: "sachidananda0608@gmail.com",
-    pass: "crmjskvmxxowlcux",
+    user: process.env.USER,
+    pass: process.env.PASSWORD,
   },
 });
 
