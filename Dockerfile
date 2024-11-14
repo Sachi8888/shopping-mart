@@ -19,7 +19,7 @@ RUN npm install
 COPY --chown=node:node . .
 
 # Expose port
-EXPOSE 8080
+EXPOSE 3000
 
 # Run the application
 CMD ["node", "app.js"]
